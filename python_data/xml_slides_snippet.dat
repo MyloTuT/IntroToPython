@@ -1,0 +1,31 @@
+
+An <B>XML processor</B> is a necessary piece of the XML puzzle. The XML processor takes the XML document and DTD and processes the information so that it may then be used by applications requesting the information. 
+
+A <B>document type definition (DTD)</B> is a set of markup declarations that define a document type for an SGML-family markup language (SGML, XML, HTML). A Document Type Definition (DTD) defines the legal building blocks of an XML document. It defines the document structure with a list of legal elements and attributes.
+
+XML documents contain self-describing data.  Self-describing data is data that describes both its content and its structure.  
+
+XML is also used for cross-platform data communication (i.e., a common, not platform independent approach to data structuring).  
+
+&lt;?xml version="1.0" encoding="ISO-8859-15"?&gt;
+&lt;class_list&gt;
+	&lt;student&gt;
+		&lt;name&gt;Robert&lt;/name&gt;
+		&lt;grade&gt;A+&lt;/grade&gt;
+	&lt;/student&gt;
+	&lt;student&gt;
+		&lt;name&gt;Lenard&lt;/name&gt;
+		&lt;grade&gt;A-&lt;/grade&gt;
+	&lt;/student&gt;
+&lt;/class_list&gt;
+
+
+Parts of an XML document
+
+    Prolog
+        XML Declaration:  which version of XML you are using
+        DTD Declaration:  
+    Root Element (Document)
+        Elements (Nested Elements)
+            Element Attributes and Values
+            Data
