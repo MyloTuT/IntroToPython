@@ -1,0 +1,7 @@
+Haddad's,PA,239.50
+Westfield,NJ,53.90
+The Store,NJ,211.50
+Hipster's,NY,11.98
+Dothraki Fashions,NY,5.98
+Awful's,PA,23.95
+The Clothiers,NY,115.20

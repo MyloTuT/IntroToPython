@@ -1,0 +1,49 @@
+#!/bin/env python
+
+
+import re
+
+# regex_test.py:  test data and test code to verify validation regexes
+
+
+# please enter your regex patterns into this dict 
+# (between the quotes in r'' of course)
+regex_dict =   {
+                 'integers':        r'xxx',
+                 'floats':          r'xxx',
+                 'titlecase_names': r'xxx',
+               }
+
+test_dict =    { 
+    'integers': [ '34', '5', '333', '', '  34', '34  ', '34D5', 'D534' ],
+
+    'floats':   [ '5.3', '.55', '55.0', '.5', '5.33', '5.5.5', '5.3d',
+                  'd5.3', 'd5', '5d', '5..3', '5.', '5.3.', '', '5' ],
+
+    'titlecase_names': [ 'George', 'Peter', ' George', 'George ', 
+                         'george', 'peterB', 'DPApatow', 'David23', 
+                         '23George', '', 'Jean-Claude', 'Jean-claude', 
+                         'GeorgeBenson', 'PETER' ], 
+}
+
+success_dict = {
+                 'integers': 3,
+                 'floats':   5,
+                 'titlecase_names': 2
+               }
+
+for test_type in test_dict:
+  success_count = 0
+  print "%s:  (only %s should succeed)" % (test_type, success_dict[test_type])
+  for value in test_dict[test_type]:
+    if re.search(regex_dict[test_type], value):
+      print " " * (15-len(value)) + '"' + value + '":  ' + 'success'
+      success_count += 1
+    else:
+      print " " * (15-len(value)) + '"' + value + '":  ' + 'fail'
+  if success_count != success_dict[test_type]:
+    print 'ERROR:  success count does not match expected success count'
+  print
+  
+
+ 
