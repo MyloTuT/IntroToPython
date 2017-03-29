@@ -8,3 +8,6 @@ lines = fh.readlines()[1:]
 
 for line in lines:
     id, street, city, state, zip = line.split(':')
+    outer_list.append(id)
+
+print(outer_list[0])

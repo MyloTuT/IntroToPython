@@ -4,7 +4,7 @@ sawyer_doc = open("../python_data/sawyer.txt")
 
 text = sawyer_doc.read()
 
-line = text.splitlines()
+lines = text.splitlines()
 words = text.split()
 
 line_length = line[0:-1]
