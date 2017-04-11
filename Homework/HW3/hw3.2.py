@@ -7,14 +7,12 @@ text = sawyer_doc.read()
 lines = text.splitlines()
 words = text.split()
 
-line_length = line[0:-1]
-length_show = len(line_length)
+lines_count = len(lines)
 
-word = words[0:-1]
-word_count = len(word)
+word_count = len(words)
 
-truth_count = len(repr(text))
+characater_count = len(text)
 
 sawyer_doc.close()
 
-print(length_show, word_count, truth_count)
+print(lines_count, word_count, characater_count)

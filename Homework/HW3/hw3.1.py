@@ -13,16 +13,16 @@ while True:
 fo = open("../python_data/Fama-French_data.txt")
 
 for lines in fo:
-    line = lines[12:16]
+    mrkt_rt = lines.split()[1]
     lines_year = lines[0:4]
 
     if user_year == lines_year:
         counter += 1
-        line_num = float(line)
+        line_num = float(mrkt_rt)
         line_sum = line_sum + line_num
 
 
 line_av = line_sum / counter
 fo.close()
 
-print('count {}, sum {}, average {}'.format(counter, line_sum, line_av))
+print('count {}, sum {}, average {}'.format(counter, round(line_sum, 2), round(line_av, 2)))

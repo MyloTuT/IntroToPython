@@ -12,6 +12,6 @@ for line in lines:
     id, street, city, state, zip = line.split(':')
     if state not in state_count:
         state_count[state] = 0
-    state_count[state] = state_count[state] + 1
+    state_count[state] = inner_list
 
 print(state_count['NY'])
