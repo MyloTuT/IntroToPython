@@ -16,7 +16,7 @@ print(len(text))
 # appear to be in one of the line of the file.  See the slide on raise for
 # details on raising an exception with a message.
 
-list_of_lists = filelib.getfields(data_file, delimiter='baddelimeter')
+#list_of_lists = filelib.getfields(data_file, delimiter='baddelimeter')
 
 
 list_of_lists = filelib.getfields(data_file, delimiter=':')

@@ -1,21 +1,28 @@
+import os
+
 def getlines(filename, newlines=False):
     try:
-        open_file = open(filename)
-    except (IndexError):
+        user_file = os.path.isfile(filename)
+    except IndexError:
         exit('please input a file name')
 
+    #fixed terrible logic by initiating an empty list to report back
+    # loop results. Logic similar to 'readlines()'
+    file_lines = []
     for lines in open(filename).readlines():
-        if newlines == True:
-            return lines
-        else:
-            return lines.rstrip()
+        file_lines.append(lines)
+
+    if newlines == True:
+        return file_lines
+    else:
+        return file_lines.rstrip()
 
 
 
 def gettext(filename):
     try:
         open_file = open(filename)
-    except (IndexError):
+    except IndexError:
         exit('please input a file name')
 
     return open(filename).read()
@@ -24,18 +31,17 @@ def gettext(filename):
 
 def getfields(filename, delimiter=None):
     try:
-        delimiter == ',', ':', ' ', None
-    except ValueError:
-        exit('please insert a comma, semi-colon, or space')
-    try:
-        open_file = open(filename)
+        user_file = os.path.isfile(filename)
     except IndexError:
         exit('please enter a file name')
 
-    delimter_list = [',', ':', ' ']
+    delimter_list = [',', ':', ' ', None]
+    if delimiter not in delimter_list:
+        raise ValueError('you entered a bad delimiter')
+
     inner_list = []
     outer_list = []
-
+    open_file = open(filename)
     for lines in open_file.readlines():
         inner_list.append(lines)
         if delimiter in delimter_list:
