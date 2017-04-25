@@ -31,12 +31,4 @@ while True:
         if items in users_new_files:
             True
         else:
-            print('{} added.'.format(item))
-
-    # for item in users_old_files:
-    #     if item in users_new_files:
-    #         True
-    #         break
-    #     else:
-    #         print('{} added.'.format(item))
-    users_new_files = users_old_files
+            print(users_old_files.difference(users_new_files))
