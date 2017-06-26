@@ -6,6 +6,7 @@ for line in open('../python_data/student_db.txt'):
     ids = line_items[0]
     ids_data = line_items[1:]
     student_data[ids] = ids_data
+print(student_data)
 
 print('{} records loaded.'.format(len(student_data)-1) )
 
