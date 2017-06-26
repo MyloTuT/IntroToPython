@@ -12,10 +12,10 @@ while True:
 fo = open('/Users/mrayfield/git/IntroToPython/python_data/F-F_Research_Data_Factors_daily.txt')
 market_value = []
 
-fo_read = fo.readlines()
-fo_slice = fo_read[5:-1][0:-1]
+fo_read = fo.readlines()[5:-1][0:-1]
+#fo_slice = fo_read[5:-1][0:-1]
 
-for lines in fo_slice:
+for lines in fo_read:
     years = lines[0:4]
     if user_input == years:
         years, mkt_rf, smb, hml, rf = lines.split()
